@@ -23,7 +23,7 @@
 #The Substitute command:
 ------------------------
 		-":s/<old>/<new>/g" replaces all the occurances of "old" with "new" in the current sentence.
-		-Note: ":s/<old>/<new>" replaces only the first occurance of "old" with "new". Adding "g" tells VIM to substitute globally in 		       the sentence.
+		-Note: ":s/<old>/<new>" replaces only the first occurance of "old" with "new". Adding "g" tells VIM to substitute globally in the sentence.
 		-":#,#s/<old>/<new>/g" replaces all the occureances of "old" with "new" within the line numbers specified by #.
 		-":%s/<old>/<new>/g" replaces all the occurances of "old" with "new" in the whole document.
 		-":%s/<old>/<new>/gc" performs the same action, but promts the user on whether to replace each occurance or not.
