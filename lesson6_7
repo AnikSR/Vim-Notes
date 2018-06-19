@@ -1,0 +1,38 @@
+# Set search pattern:
+=====================
+	- ":set ic" sets the ignore case option. Now ":/<phrase>" will ignore the upper and lowercase in the <phrase>.
+	- ":set noic" will turn off the ignore case option.
+	- "hlsearch" or the highlight search option will highlight all the occurance of searched phrase in the document. ":set hlsearch" or
+	   ":set hls" command will enable this option and ":set nohlsearch" or ":no hlsearch" or "no hls" will disable this.
+	- "incsearch" or the incremental search option heighlighs all the partial matches for the search phrase. ":set is" or ":set incsearch
+	  enables this option.
+	- The disable command for incremental search is ":nois".
+	* note: ":hi search" command shows search options like highlight color.
+
+# Set line number:
+==================
+	- ":set number" and ":set nu" shows line number at the left side of the document.
+	- ":set nonumber" and ":set nonu" turns off the line number.
+
+* In generally prepending "no" before any command in set option will turn off that command.
+
+# Geting Help:
+==============
+	- Press F1 or type ":help" command to turn on the help document.
+	- ":help <topic>" will take directly to the portion of the help document with <topic>.
+
+# Command maching and tab completion:
+=====================================
+	- Pressing ctrl+d after a partial command name typed after ":" will list all the matching cammand names. Example:
+	  pressing :e ctrl+d returns a list:
+
+	  earlier      echoerr      echomsg      edit         elseif       endfor       endif        endwhile     ex           exit
+	  echo         echohl       echon        else         emenu        endfunction  endtry       enew         execute      exusage
+	
+	  It contains all the commands starting with letter 'e'.
+
+	- Pressing 'tab' after a partial command name typed after ":" will complete the partial name to the first matching command. Pressing
+	  tab again will return the next best matching command and so on. Like in the previous example, pressing tab after ":e" will complete
+	  it to "earlier", pressing tab again will bring the command "echo" and so on.
+
+* To set different option for vim the .vimrc file must be scripted accordingly. Introduction to .vimrc file and vim scripting can be found by using ":help vimrc-intro" command.

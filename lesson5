@@ -1,0 +1,36 @@
+# Executing external command:
+=============================
+	":!<shell command>" will execute shell command while still inside VIM. A command end in newline(Enter).
+
+# Writting part of the file:
+============================
+	- Start visual mode by pressing v.
+	- Select the necessary sectioni using proper motion command(like $ to select upto the end of the line etc).
+	- press ":" and "'<,'>" will appear after ":".
+	- Write the selected portion with specific <filename> using "w <filename>" command.
+
+# Retriving and Merging files:
+==============================
+	- Place the cursor at a suitable location and go to normal mode.
+	- type ":r <filename>" to import/retirve all the contents of <filename> to the current file.
+	- ":# r <filename>" will paste the retrived texts to '#' line of the text. 
+	- This command can be used to retrive any text to current document. for example, ":r !ls" will retrive the output of ls shell command 
+	  to current document. Ep: ":r !ls <Enter>" shows bellow the contetnt of the mother directory of the current document.
+	
+			BS
+			lesson4
+			lesson5
+
+# Using system clipboard:
+=========================  
+	- Check using "$vim --version", if clipboard is available, "+clipboard" and/or "+xterm_clipboard" will be available. If clipboard is 
+	  ubavailable them "-clipboard" and/or "-xterm_clipboard" will be in the list.
+	- Install a version of vim with clipboard enabled. Ep: "$sudo apt install vim-gnome" will install gvim where clipboard is available.
+	- There are two clipboard register available in Unix like operation system. xa_primary, the X11 primary clipboard register designated 		by * inside vim and the xa_secondary, the desktop clipboard register designated by + inside vim.
+	- Use "v + motion" to select a portion of the text.
+	- Press ":" and "'<,'>" will appear after the ":".
+	- ":'<, '>y +" will copy/yank the highlighed post to the + register. Similary ":'<, '>y *" will copy the selected text to * register.
+	- To paste the yanked text to a new document, open a new document and position the cursor to the necessary location.
+	- Paste selected text from the clip board by pressing "p* or "p+ to paste from * or + register.
+
+* The last section is collected for vimwiki in wikia.com.
