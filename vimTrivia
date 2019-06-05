@@ -11,3 +11,8 @@ Commands	Explanations
  :ls		Lists all file in the buffer while editing more than one file. This is actually an alias for ":buffers" command.
  :e <file>	Adds <file> to the buffer.
  :bd#n/:#nbd	Deletes the #nth file from the buffer. If #n argument isn't given, removes the current file from the buffer.		
+ :syntax on     Turns on syntax highlighting.
+ :set hlsearch    Turns on highlighiting search result. ":set hls" is the short form. The disable ":set no hlsearch"/":set no hls".
+ :set incsearch   Turns on incremental search. In sort form the command is ":set inc". Likewise ":set noinc"/":set noincsearch" undoes it.
+ :set tabstop=4   Sets tab width to 4.
+ :set autoindent  Turns on autoindentation. Likewise ":set noautoindent" turns off autoindentation.
