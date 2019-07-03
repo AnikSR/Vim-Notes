@@ -16,3 +16,22 @@ Commands	Explanations
  :set incsearch   Turns on incremental search. In sort form the command is ":set inc". Likewise ":set noinc"/":set noincsearch" undoes it.
  :set tabstop=4   Sets tab width to 4.
  :set autoindent  Turns on autoindentation. Likewise ":set noautoindent" turns off autoindentation.
+ ctrl+](^])         When cursor is on a hyperlink tag, pressing ^] loads the linked page to current window. Its called "push tag" command.
+ ctrl+T(^T)         Load the previous window. Its called "pop tag" command.
+ ^u                 Scroll up half a screen.
+ ^d                 Scroll down half a screen.
+ .                  Repeat the last delete action.
+ ^k+<digraph seq>   Enter the character represented by respective digraph sequence. Eg: ^k+Co inserts the "©" character.
+ :digraph           Lists all the digraph characters supported by current version of vim. Digraph list is shown in a new window.
+ /<str>             Searches and jump to first occurance of <str> in the document.
+ /Enter             Jump to next instance of <str> in the document. Its name as pressing "n".
+ ?<str>             Searches and jump to the last occurance of <str> in the document. Upon pressing "n" the cursor moves to previous occurance
+                    of <str> and to the next occurance on "N", exactly opposite of "/<str>" command. This is why "?<str>" is called reversed
+                    search.
+ /^[str]            Search for [str] when it appears at the beginning of the line.
+ /[str]$            Search for [str] when it appears at the end of the line.
+ /^[str]$           Search for the [str] when it appears as the sole word of a line.
+ /^$                Search for empty lines.
+ /[lt].[ltr]        The regular expression "." represents a single letter. Thus "/c.m" searches for all: com.., cam..., cim... etc.
+
+*Note: Macros in vim record action, not words phrases or strings, just like "." command.
